@@ -3,15 +3,15 @@
 <!-- navbar-->
 <header class="header header-absolute">
     <nav class="navbar navbar-expand-lg bg-transparent border-0 shadow-0 navbar-light px-lg-5 ">
-        <a class="navbar-brand" href="/tienda de ropa.html">
-            <img src="./logo_de_ropa.png" width="100" alt="Almacen Juanes">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'img/logo_de_ropa.png' %}" width="100" alt="Almacen Juanes">
         </a>
 
         <!-- dispositivos -->
         <ul class="list-inline mb-0 d-block d-lg-none">
             <!-- persona -->
             <li class="list-inline-item me-3">
-                <a class="text-dark text-primary-hover" href="#">
+                <a class="text-dark text-primary-hover" href="{% url 'login'%}">
                     <svg class="svg-icon navbar-icon">
                         <use xlink:href="#avatar-1"> </use>
                     </svg>
@@ -20,7 +20,7 @@
             <!-- carrito -->
 
             <li class="list-inline-item position-relative me-3">
-                <a class="text-dark text-primary-hover" href="#">
+                <a class="text-dark text-primary-hover" href="">
                     <svg class="svg-icon navbar-icon">
                         <use xlink:href="#retail-bag-1"> </use>
                     </svg>
@@ -67,14 +67,14 @@
             <!-- escritorios -->
             <ul class="list-inline mb-0 d-none d-lg-block">
                 <li class="list-inline-item me-3">
-                    <a class="text-dark text-primary-hover" href="#">
+                    <a class="text-dark text-primary-hover" href="{% url 'login'%}">
                         <svg class="svg-icon navbar-icon">
                             <use xlink:href="#avatar-1"> </use>
                         </svg>
                     </a>
                 </li>
                 <li class="list-inline-item position-relative me-3">
-                    <a class="text-dark text-primary-hover" href="#">
+                    <a class="text-dark text-primary-hover" href="">
                         <svg class="svg-icon navbar-icon">
                             <use xlink:href="#retail-bag-1"> </use>
                         </svg>  

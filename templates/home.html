@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 <!-- Carusel-->
 <div class="swiper swiper-container home-slider swiper-initialized swiper-horizontal swiper-pointer-events"
@@ -7,8 +9,7 @@ style="height: 95vh; min-height: 600px;">
 <div class="swiper-wrapper" id="swiper-wrapper-feb9f58c39c95ba1" aria-live="off"
       style="transition-duration: 0ms; transform: translate3d(-1343px, 0px, 0px);">
       <!-- hojas-->
-      <div class="swiper-slide bg-cover bg-cover-right swiper-slide-visible swiper-slide-active"
-        style="background-image: url(/home-1-plain.jpg); width: 1343px;" aria-label="1 / 2">
+      <div class="swiper-slide bg-cover bg-cover-right swiper-slide-visible swiper-slide-active" id="fondo1" aria-label="1 / 2">
         <div class="container-fluid px-lg-6 px-xl-7 h-100">
           <div class="row h-100 align-items-center"
             style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
@@ -20,11 +21,10 @@ style="height: 95vh; min-height: 600px;">
           </div>
         </div>
       </div>
-      <div class="swiper-slide bg-cover swiper-slide-next"
-        style="background-image: url(/home-2-plain.jpg); width: 1343px;" aria-label="2 / 2">
+      <div class="swiper-slide bg-cover swiper-slide-next" id="fondo2" aria-label="2 / 2">
         <div class="container-fluid px-lg-6 px-xl-7 h-100">
           <div class="row h-100 justify-content-center align-items-center text-center"
-            style="transition-duration: 0ms; transform: translate3d(500px, 0px, 0px);">
+            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
             <div class="col-lg-6">
               <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light">Azul y blanco</p>
               <h2 class="display-1 mb-3" style="line-height: 1">Lino y jean</h2>
@@ -53,7 +53,7 @@ style="height: 95vh; min-height: 600px;">
       <div class="row">
         <div class="col-sm-4 mb-5 mb-sm-0">
           <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center">
-            <img class="card-img img-scale" src="./css/category-women.jpg" alt="Card image">
+            <img class="card-img img-scale" src="{% static 'img/category-women.jpg' %}" alt="Card image">
             <div class="card-img-overlay d-flex align-items-center">
               <div class="w-100 py-3">
                 <h2 class="display-3 fw-bold mb-0">Mujer</h2><a class="stretched-link"
@@ -65,7 +65,7 @@ style="height: 95vh; min-height: 600px;">
         </div>
         <div class="col-sm-4 mb-5 mb-sm-0">
           <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center">
-            <img class="card-img img-scale" src="./css/category-niño.jpg" alt="Card image">
+            <img class="card-img img-scale" src="{% static 'img/category-niño.jpg' %}" alt="Card image">
             <div class="card-img-overlay d-flex align-items-center">
               <div class="w-100 py-3">
                 <h2 class="display-3 fw-bold mb-0">Kids</h2><a class="stretched-link"
@@ -77,7 +77,7 @@ style="height: 95vh; min-height: 600px;">
         </div>
         <div class="col-sm-4 mb-5 mb-sm-0">
           <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center">
-            <img class="card-img img-scale" src="./css/category-men.jpg" alt="Card image">
+            <img class="card-img img-scale" src="{% static 'img/category-men.jpg' %}" alt="Card image">
             <div class="card-img-overlay d-flex align-items-center">
               <div class="w-100 py-3">
                 <h2 class="display-3 fw-bold mb-0">Hombre</h2><a class="stretched-link"
@@ -132,7 +132,7 @@ style="height: 95vh; min-height: 600px;">
   </div>
 
   <!-- OFERTA -->
-  <div class="py-6 bg-cover bg-cover-right" style="background-image: url(./deal-plain.jpg);">
+  <div class="py-6 bg-cover bg-cover-right" id="fondo3">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-xl-6">

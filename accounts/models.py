@@ -64,7 +64,7 @@ class Account(AbstractBaseUser):
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     objects = MyAccountManager()
-    def _str_(self):
+    def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
 
     def has_perm(self, perm, obj=None):
