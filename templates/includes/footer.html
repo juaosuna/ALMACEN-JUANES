@@ -1,0 +1,137 @@
+{% load static %}
+
+<footer>
+    <!-- Servicios-->
+    <div class="py-5 py-lg-5 bg-gray-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 py-4 service-column">
+            <svg class="svg-icon service-icon">
+              <use xlink:href="#delivery-time-1"> </use>
+            </svg>
+            <div class="service-text">
+              <h6 class="text-sm mb-1">Envío a nivel nacional</h6>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 py-4 service-column">
+            <svg class="svg-icon service-icon">
+              <use xlink:href="#money-1"> </use>
+            </svg>
+            <div class="service-text">
+              <h6 class="text-sm mb-1">Garantía de devolución del dinero por daños del producto</h6>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 py-4 service-column">
+            <svg class="svg-icon service-icon">
+              <use xlink:href="#special-price-1"> </use>
+            </svg>
+            <div class="service-text">
+              <h6 class="text-sm mb-1">Buenas ofertas</h6>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 py-4 service-column">
+            <svg class="svg-icon service-icon">
+              <use xlink:href="#customer-support-1"> </use>
+            </svg>
+            <div class="service-text">
+              <h6 class="text-sm mb-1">Asistencia disponible</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright section of the footer-->
+    <div class="py-4 fw-light text-muted bg-gray-100">
+      <div class="container">
+        <div class="row align-items-center text-sm text-gray-500">
+          <div class="col-lg-4 text-center text-lg-start">
+            <p class="mb-lg-0">© 2022, Almacen Juanes.</p>
+          </div>
+          <div class="col-lg-8">
+            <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-lg-end">
+              <li class="list-inline-item"> <a class="text-reset"
+                  href="#">Términos &amp; condiciones</a></li>
+              <li class="list-inline-item"> <a class="text-reset"
+                  href="#">Privacidad &amp; cookies </a></li>
+              <!-- metodos de pago -->
+              <img class="footer-payment" src="{% static 'img/mastercard.svg' %}" alt="mastercard">
+              <img class="footer-payment" src="{% static 'img/visa.svg' %}" alt="visa">
+              <img class="footer-payment" src="{% static 'img/amex.svg' %}" alt="american express">
+              <img class="footer-payment" src="{% static 'img/paypal.svg' %}" alt="paypal">
+              <img class="footer-payment" src="{% static 'img/maestro.svg' %}" alt="maestro">
+            </ul>
+          </div>
+          <div class="col-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /Footer end-->
+
+
+  <!-- JavaScript files-->
+  <script>
+    // ------------------------------------------------------- //
+    //   Inject SVG Sprite - 
+    //   see more here 
+    //   https://css-tricks.com/ajaxing-svg-sprite/
+    // ------------------------------------------------------ //
+    function injectSvgSprite(path) {
+
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", path, true);
+      ajax.send();
+      ajax.onload = function (e) {
+        var div = document.createElement("div");
+        div.className = 'd-none';
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      }
+    }
+    // this is set to Bootstrapious website as you cannot 
+    // inject local SVG sprite (using only 'icons/orion-svg-sprite.3f375885.svg' path)
+    // while using file:// protocol
+    // pls don't forget to change to your domain :)
+    injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/icons/orion-svg-sprite.svg');
+    injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/icons/varkala-clothes.svg');
+    injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/img/shape/blob-sprite.svg');
+
+  </script>
+  <!-- jQuery-->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <!-- Bootstrap Bundle -->
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <!-- Swiper Carousel                       -->
+  <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+  <!-- Bootstrap Select-->
+  <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+  <!-- AOS - AnimationOnScroll-->
+  <script src="{% static 'js/aos.js' %}"></script>
+  <!-- Custom Scrollbar-->
+  <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+  <script src="{% static 'js/custom-scrollba.js' %}"></script>
+  <!-- Smooth scroll-->
+  <script src="{% static 'js/smooth-scroll.polyfills.min.js' %}"></script>
+  <!-- Object Fit Images - Fallback for browsers that don't support object-fit-->
+  <script src="{% static 'js/ofi.min.js' %}"></script>
+
+  <!-- JavaScript tiempo contador-->
+  <script src="{% static 'js/countdown.js' %}"></script>
+  <script>
+    var deadline = new Date(Date.parse(new Date()) + 2 * 10 * 60 * 60 * 1000);
+    var countdown = new Countdown('countdown', deadline);
+
+  </script>
+  <!-- Some theme config-->
+  <script>
+    var options = {
+      navbarExpandPx: 992
+    }
+
+  </script>
+  <!-- Main Theme files-->
+  <script src="{% static 'js/sliders-init.js' %}"></script>
+  <script src="{% static 'js/theme.js' %}"></script>
+</footer>

@@ -1,0 +1,86 @@
+{% load static %}
+
+<!-- navbar-->
+<header class="header header-absolute">
+    <nav class="navbar navbar-expand-lg bg-transparent border-0 shadow-0 navbar-light px-lg-5 ">
+        <a class="navbar-brand" href="/tienda de ropa.html">
+            <img src="./logo_de_ropa.png" width="100" alt="Almacen Juanes">
+        </a>
+
+        <!-- dispositivos -->
+        <ul class="list-inline mb-0 d-block d-lg-none">
+            <!-- persona -->
+            <li class="list-inline-item me-3">
+                <a class="text-dark text-primary-hover" href="#">
+                    <svg class="svg-icon navbar-icon">
+                        <use xlink:href="#avatar-1"> </use>
+                    </svg>
+                </a>
+            </li>
+            <!-- carrito -->
+
+            <li class="list-inline-item position-relative me-3">
+                <a class="text-dark text-primary-hover" href="#">
+                    <svg class="svg-icon navbar-icon">
+                        <use xlink:href="#retail-bag-1"> </use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+            aria-controls="navbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <svg class="svg-icon navbar-icon">
+                <use xlink:href="#menu-hamburger-1"> </use>
+            </svg>
+        </button>
+
+        <!-- menu -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mt-3 mt-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " id="shopDropdown" href="#">Tienda</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " id="shopDropdown" href="{% url 'contactenos' %}">Contactenos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " id="shopDropdown" href="{% url 'nosotros' %}">Nosotros</a>
+                </li>
+            </ul>
+            <!-- buscador -->
+            <form class="d-lg-flex ms-auto me-lg-5 me-xl-6 my-4 my-lg-0"
+            action="#">
+            <div class="input-group input-group-underlined">
+                <input class="form-control form-control-underlined ps-3" type="text" placeholder="Search"
+                aria-label="Search" aria-describedby="button-search">
+                <button class="btn btn-underlined" id="button-search" type="button">
+                <svg class="svg-icon navbar-icon">
+                    <use xlink:href="#search-1"> </use>
+                </svg>
+                </button>
+            </div>
+            </form>
+            <!-- escritorios -->
+            <ul class="list-inline mb-0 d-none d-lg-block">
+                <li class="list-inline-item me-3">
+                    <a class="text-dark text-primary-hover" href="#">
+                        <svg class="svg-icon navbar-icon">
+                            <use xlink:href="#avatar-1"> </use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="list-inline-item position-relative me-3">
+                    <a class="text-dark text-primary-hover" href="#">
+                        <svg class="svg-icon navbar-icon">
+                            <use xlink:href="#retail-bag-1"> </use>
+                        </svg>  
+                    </a>
+                </li>
+            </ul>   
+        </div>
+    </nav>
+</header>

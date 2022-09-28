@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <!-- Hero Section-->
+  <section class="hero hero-image light-overlay" style="background-image: url('/contactenos.jpg');">
+      <div class="container overlay-content" >
+        <!-- Hero Content-->
+        <div class="hero-content">
+          <h1 class="hero-heading">Contactenos</h1>
+        </div>
+      </div>
+  </section>
+    
+  <section class="py-6">
+    <div class="container">       
+      <div class="row">
+        <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+        <h4>Dirección</h4>
+        <p class="text-muted">Calle 40 6-18<br>B/ Restrepo<br>Ibagué, <strong>Tolima</strong></p>
+      </div>
+      <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+        <h4>Telefono</h4>
+        <p class="text-muted">Puede comunicarte a traves de nuestro número llamando o escribiendo.</p>
+        <p class="text-muted"><strong>+57 322 269 7875</strong></p>
+      </div>
+      <div class="col-md-4 text-center text-md-start">
+        <h4>Correo Electronico</h4>
+        <p class="text-muted">No dude en escribirnos un correo electrónico si tienes problemas</p>
+        <ul class="list-unstyled text-muted">
+          <li>jdosuna4@misena.edu.co</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-200 position-relative overflow-hidden">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 px-0 map-responsive">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.5022173168131!2d-75.1648970708486!3d4.409436636935223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38daad0da89a07%3A0xf7930afe964c237b!2sCl.%20117%20%2344a%20Sur-29%20a%2044a%20Sur-1%2C%20Ibagu%C3%A9%2C%20Tolima!5e0!3m2!1ses!2sco!4v1663567535785!5m2!1ses!2sco" width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
+        <div class="col-lg-6 py-6 px-lg-5 px-xl-6">
+          <h2 class="display-3 fw-bold text-gray-600 mb-5">tiendas</h2>
+          <div class="row py-4 border-bottom">
+            <div class="col-6 col-md-3 fw-bold align-self-center">
+              <h4 class="mb-0">Santa Rita</h4>
+            </div>
+            <div>
+              <div class="col-6 col-md-3 text-sm">Calle 117</div>
+              <div class="col-6 col-md-3 text-sm">0000000000</div>
+              <div class="col-6 col-md-3 text-sm">email@email.com</div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  
+{% endblock  %}

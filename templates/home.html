@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Carusel-->
+<div class="swiper swiper-container home-slider swiper-initialized swiper-horizontal swiper-pointer-events"
+style="height: 95vh; min-height: 600px;">
+<!-- trasicion-->
+<div class="swiper-wrapper" id="swiper-wrapper-feb9f58c39c95ba1" aria-live="off"
+      style="transition-duration: 0ms; transform: translate3d(-1343px, 0px, 0px);">
+      <!-- hojas-->
+      <div class="swiper-slide bg-cover bg-cover-right swiper-slide-visible swiper-slide-active"
+        style="background-image: url(/home-1-plain.jpg); width: 1343px;" aria-label="1 / 2">
+        <div class="container-fluid px-lg-6 px-xl-7 h-100">
+          <div class="row h-100 align-items-center"
+            style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+            <div class="col-lg-6">
+              <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light">Nuestros favoritos de todos los tiempos</p>
+              <h2 class="display-1 mb-3" style="line-height: 1">Blusas y tops</h2>
+                <a class="btn btn-dark" href="#">Descubrir más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide bg-cover swiper-slide-next"
+        style="background-image: url(/home-2-plain.jpg); width: 1343px;" aria-label="2 / 2">
+        <div class="container-fluid px-lg-6 px-xl-7 h-100">
+          <div class="row h-100 justify-content-center align-items-center text-center"
+            style="transition-duration: 0ms; transform: translate3d(500px, 0px, 0px);">
+            <div class="col-lg-6">
+              <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light">Azul y blanco</p>
+              <h2 class="display-1 mb-3" style="line-height: 1">Lino y jean</h2>
+              <p class="text-dark font-weight-light">En tu primera compra obtendras un cupon de descuento</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- movimiento -->
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-bullets-dynamic" style="width: 80px;">
+      <span class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main"tabindex="0" role="button" aria-label="Go to slide 1" style="left: 16px;"></span>
+      <span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" tabindex="0" role="button" aria-label="Go to slide 2" style="left: 16px;"></span>
+      <span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" tabindex="0" role="button" aria-label="Go to slide 3" style="left: 16px;"></span>
+    </div>
+    <!-- flechas -->
+    <div class="swiper-nav d-none d-lg-block">
+      <div class="swiper-button-prev" id="homePrev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-feb9f58c39c95ba1"></div>
+      <div class="swiper-button-next" id="homeNext" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-feb9f58c39c95ba1"></div>
+    </div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+  </div>
+  <!-- Categoria grande-->
+  <div class="bg-gray-100 position-relative">
+    <div class="container py-6">
+      <div class="row">
+        <div class="col-sm-4 mb-5 mb-sm-0">
+          <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center">
+            <img class="card-img img-scale" src="./css/category-women.jpg" alt="Card image">
+            <div class="card-img-overlay d-flex align-items-center">
+              <div class="w-100 py-3">
+                <h2 class="display-3 fw-bold mb-0">Mujer</h2><a class="stretched-link"
+                  href="#"><span class="sr-only">See
+                  </span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-5 mb-sm-0">
+          <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center">
+            <img class="card-img img-scale" src="./css/category-niño.jpg" alt="Card image">
+            <div class="card-img-overlay d-flex align-items-center">
+              <div class="w-100 py-3">
+                <h2 class="display-3 fw-bold mb-0">Kids</h2><a class="stretched-link"
+                  href="#"><span class="sr-only">See
+                  </span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-5 mb-sm-0">
+          <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center">
+            <img class="card-img img-scale" src="./css/category-men.jpg" alt="Card image">
+            <div class="card-img-overlay d-flex align-items-center">
+              <div class="w-100 py-3">
+                <h2 class="display-3 fw-bold mb-0">Hombre</h2><a class="stretched-link"
+                  href="#"><span class="sr-only">See
+                  </span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- productos -->
+  <div class="container-fluid container-fluid-px py-5">
+    <div class="row justify-content-between align-items-center mb-5">
+      <div class="row">
+        <div class="col-lg-10 col-xl-8 text-center mx-auto">
+          <h2 class="display-3 mb-5">Nuevos Productos</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- product-->
+      <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+        <div class="product product-type-0 aos-init aos-animate">
+          <div class="product-image mb-md-3">
+            <a href="#">
+              <div class="product-swap-image">
+                <img class="img-fluid product-swap-image-front"src="./css/0950354513_1_1_1.jpg" alt="producto">
+                <img class="img-fluid" src="./css/0950354513_2_1_1.jpg" alt="producto">
+                </div>
+              </a>
+            <div class="product-hover-overlay">
+              <a class="text-dark text-sm" href="#">
+                <svg class="svg-icon text-primary-hover svg-icon-heavy d-sm-none">
+                  <use xlink:href="#retail-bag-1"> </use>
+                </svg>
+                <span href="#" class="d-none d-sm-inline">Agregar al carrito</span>
+              </a>
+            </div>
+          </div>
+          <div class="position-relative">
+            <h3 class="text-base mb-1">
+              <a class="text-dark" href="#">Black blouse</a>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <!-- /product   -->
+
+    </div>
+  </div>
+
+  <!-- OFERTA -->
+  <div class="py-6 bg-cover bg-cover-right" style="background-image: url(./deal-plain.jpg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-6">
+          <p class="subtitle mb-3 text-danger">OFERTA DE LA SEMANA</p>
+          <h3 class="h1">Chaqueta Azul</h3>
+          <p class="text-muted">
+            <del class="me-3">$129.000</del><span>$64.500</span>
+          </p>
+          <p class="mb-4"><span class="badge bg-danger p-3">%50 off</span></p>
+          <div class="bg-white px-5 py-4 shadow mb-4" id="countdown">
+            <div class="row justify-content-between">
+              <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                <h6 class="h4 mb-2 days">00</h6><span class="text-muted">dias</span>
+              </div>
+              <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                <h6 class="h4 mb-2 hours">20</h6><span class="text-muted">horas</span>
+              </div>
+              <div class="col-6 col-sm-3 text-center">
+                <h6 class="h4 mb-2 minutes">00</h6><span class="text-muted">minutos</span>
+              </div>
+              <div class="col-6 col-sm-3 text-center">
+                <h6 class="h4 mb-2 seconds">00</h6><span class="text-muted">secondos</span>
+              </div>
+            </div>
+          </div>
+          <p><a class="btn btn-outline-dark" href="#">Comprar ahora</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock  %}
+

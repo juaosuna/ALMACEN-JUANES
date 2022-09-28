@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="modal fade show" id="loginModal" tabindex="-1" role="dialog" aria-modal="true" style="display: block; padding-left: 0px;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button class="btn-close btn-close-absolute btn-close-lg btn-close-rotate" type="button" aria-label="Close"> </button>
+        <div class="modal-body p-5">
+          <ul class="nav list-inline" role="tablist">
+              <li class="list-inline-item">
+                  <a class="nav-link nav-link-lg" role="tab" id="loginModalLinkLogin" aria-controls="loginModalTabLogin" aria-selected="false">Login</a>
+              </li>
+              <li class="list-inline-item">
+                  <a class="nav-link nav-link-lg active"  href="{% url 'registro' %}" role="tab" id="loginModalLinkRegister" aria-controls="loginModalTabRegister" aria-selected="true">Registrarse</a>
+              </li>
+          </ul>
+          <hr class="mb-3">
+          <div class="tab-content">
+            <div class="tab-pane fade px-3 active show" id="loginModalTabRegister" role="tabpanel" aria-labelledby="loginModalLinkRegister">
+              <form action="{% url 'registro' %}" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label class="form-label" for="nombres">Nombre de usuario</label>
+                  <input class="form-control" name="username" id="username" type="text" placeholder="Escriba su nombre completo">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="email">Correo Electronio</label>
+                  <input class="form-control" name="email" id="email" type="email" placeholder="Correo@ejemplo.com">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="password">Contraseña</label>
+                  <input class="form-control" name="password" id="password" type="password" placeholder="Escriba su contraseña">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="confirmPassword">Contraseña</label>
+                  <input class="form-control" name="confirmPassword" id="confirmPassword" type="password" placeholder="Escriba su contraseña">
+                </div>
+                <hr class="my-3 hr-text letter-spacing-2">
+                <div class="d-grid mb-3 text-center">
+                  <button class="btn btn-outline-dark" type="submit">Guardar datos</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

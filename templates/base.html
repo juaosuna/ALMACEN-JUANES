@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Almacen Juanes</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fuente personalizada-->
+  <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+  <!-- Swiper para deslizar-->
+  <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+  <!-- AOS - animaciones-->
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <!-- desplazamiento -->
+  <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.css' %}">
+  <!-- diseño estetico-->
+  <link rel="stylesheet" href="{% static 'css/style.default.css'  %}" id="theme-stylesheet">
+  <!-- diseño-->
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <!-- icono-->
+  <link rel="shortcut icon" href="{% static 'img/logo_de_ropa.png' %}">
+  <!-- iconos y fuentes -->
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+</head>
+
+<body >
+
+    <!-- menu de navegacion -->
+    {% include 'includes/nav.html' %}
+
+
+    <!-- bloque principal -->
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!-- footer -->
+    {% include 'includes/footer.html' %}
+
+</body>
+
+</html>
