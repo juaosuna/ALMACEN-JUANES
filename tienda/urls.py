@@ -24,7 +24,9 @@ from accounts import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('contactenos/', views.contactenos, name="contactenos"),
+    path('contactenos/', views.verContactenos, name="contactenos"),
     path('nosotros/', views.nosotros, name="nosotros"),
+    path('productos/', include('appProductos.urls')),
     path('accounts/', include('accounts.urls')),
-]
+    
+]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

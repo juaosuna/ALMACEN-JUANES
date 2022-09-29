@@ -16,7 +16,7 @@ style="height: 95vh; min-height: 600px;">
             <div class="col-lg-6">
               <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light">Nuestros favoritos de todos los tiempos</p>
               <h2 class="display-1 mb-3" style="line-height: 1">Blusas y tops</h2>
-                <a class="btn btn-dark" href="#">Descubrir más</a>
+                <a class="btn btn-dark" href="{% url 'producto' %}">Descubrir más</a>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ style="height: 95vh; min-height: 600px;">
             <div class="card-img-overlay d-flex align-items-center">
               <div class="w-100 py-3">
                 <h2 class="display-3 fw-bold mb-0">Mujer</h2><a class="stretched-link"
-                  href="#"><span class="sr-only">See
+                  href="{% url 'producto' %}"><span class="sr-only">See
                   </span></a>
               </div>
             </div>
@@ -69,7 +69,7 @@ style="height: 95vh; min-height: 600px;">
             <div class="card-img-overlay d-flex align-items-center">
               <div class="w-100 py-3">
                 <h2 class="display-3 fw-bold mb-0">Kids</h2><a class="stretched-link"
-                  href="#"><span class="sr-only">See
+                  href="{% url 'producto' %}"><span class="sr-only">See
                   </span></a>
               </div>
             </div>
@@ -81,7 +81,7 @@ style="height: 95vh; min-height: 600px;">
             <div class="card-img-overlay d-flex align-items-center">
               <div class="w-100 py-3">
                 <h2 class="display-3 fw-bold mb-0">Hombre</h2><a class="stretched-link"
-                  href="#"><span class="sr-only">See
+                  href="{% url 'producto' %}"><span class="sr-only">See
                   </span></a>
               </div>
             </div>
@@ -90,46 +90,9 @@ style="height: 95vh; min-height: 600px;">
       </div>
     </div>
   </div>
-  <!-- productos -->
-  <div class="container-fluid container-fluid-px py-5">
-    <div class="row justify-content-between align-items-center mb-5">
-      <div class="row">
-        <div class="col-lg-10 col-xl-8 text-center mx-auto">
-          <h2 class="display-3 mb-5">Nuevos Productos</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- product-->
-      <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-        <div class="product product-type-0 aos-init aos-animate">
-          <div class="product-image mb-md-3">
-            <a href="#">
-              <div class="product-swap-image">
-                <img class="img-fluid product-swap-image-front"src="./css/0950354513_1_1_1.jpg" alt="producto">
-                <img class="img-fluid" src="./css/0950354513_2_1_1.jpg" alt="producto">
-                </div>
-              </a>
-            <div class="product-hover-overlay">
-              <a class="text-dark text-sm" href="#">
-                <svg class="svg-icon text-primary-hover svg-icon-heavy d-sm-none">
-                  <use xlink:href="#retail-bag-1"> </use>
-                </svg>
-                <span href="#" class="d-none d-sm-inline">Agregar al carrito</span>
-              </a>
-            </div>
-          </div>
-          <div class="position-relative">
-            <h3 class="text-base mb-1">
-              <a class="text-dark" href="#">Black blouse</a>
-            </h3>
-          </div>
-        </div>
-      </div>
-      <!-- /product   -->
 
-    </div>
-  </div>
+
+
 
   <!-- OFERTA -->
   <div class="py-6 bg-cover bg-cover-right" id="fondo3">

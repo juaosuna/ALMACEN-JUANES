@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-
-
 
     <div class="py-6"  tabindex="-1" role="dialog" aria-modal="true" style="display: block; padding-left: 0px;">
         <div class="modal-dialog" role="document">
@@ -9,7 +9,7 @@
                 <div class="modal-body ">
                     <ul class="nav list-inline">
                         <li class="list-inline-item">
-                            <a class="nav-link nav-link-lg" role="tab" id="loginModalLinkLogin" aria-controls="loginModalTabLogin" aria-selected="false">Login</a>
+                            <a class="nav-link nav-link-lg" href="{% url 'login' %}" role="tab" id="loginModalLinkLogin" aria-controls="loginModalTabLogin" aria-selected="false">Login</a>
                         </li>
                         <li class="list-inline-item">
                             <a class="nav-link nav-link-lg active"  href="{% url 'registro' %}" role="tab" id="loginModalLinkRegister" aria-controls="loginModalTabRegister" aria-selected="true">Registrarse</a>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- description -->
+    <section class="bg-gray-300 detail-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <div class="detail-carousel">
+                        <div class="swiper swiper-container detail-slider photoswipe-gallery swiper-initialized swiper-horizontal swiper-pointer-events"
+                            id="detailSlider">
+                            <!-- Additional required wrapper-->
+                            <div class="swiper-wrapper" id="swiper-wrapper-5be726b813e7ad4b">
+                                <!-- Slides-->
+                                <div class="swiper-slide swiper-slide-active">
+                                    <div>
+                                        <img class="img-fluid" src="{{ producto.imagen.url }}" alt="x">
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 ps-lg-4 order-1 order-lg-2">
+                    <h1 class="h2 mb-4">{{producto.nombre}} </h1>
+                    <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between mb-4">
+                        <ul class="list-inline mb-2 mb-sm-0">
+                            <li class="list-inline-item h4 fw-light mb-0">${{producto.precio}}<br>Tallas disponibles {{producto.talla}}</li>
+                        </ul>
+                    </div>
+                    <p class="mb-4 text-muted">{{producto.descripcion}}</p>
+                    <div class="input-group w-100 mb-4">
+                        <div class="flex-grow-1">
+                            <div class="d-grid h-100">
+                                <a href="{% url 'carrito' producto.id %}" class="btn btn-dark" type="submit">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock  %}

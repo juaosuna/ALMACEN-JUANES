@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 
 <div class="py-6" id="loginModal" tabindex="-1" role="dialog" aria-modal="true" style="display: block; padding-left: 0px;">
@@ -8,7 +10,7 @@
         <div class="modal-body p-5">
           <ul class="nav list-inline" role="tablist">
               <li class="list-inline-item">
-                  <a class="nav-link nav-link-lg" role="tab" id="loginModalLinkLogin" aria-controls="loginModalTabLogin" aria-selected="false">Login</a>
+                  <a class="nav-link nav-link-lg" href="{% url 'login' %}" role="tab" id="loginModalLinkLogin" aria-controls="loginModalTabLogin" aria-selected="false">Login</a>
               </li>
               <li class="list-inline-item">
                   <a class="nav-link nav-link-lg active"  href="{% url 'registro' %}" role="tab" id="loginModalLinkRegister" aria-controls="loginModalTabRegister" aria-selected="true">Registrarse</a>
@@ -32,7 +34,7 @@
                   <input class="form-control" name="password" id="password" type="password" placeholder="Escriba su contraseña">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label" for="confirmPassword">Contraseña</label>
+                  <label class="form-label" for="confirmPassword">Confirma Contraseña</label>
                   <input class="form-control" name="confirmPassword" id="confirmPassword" type="password" placeholder="Escriba su contraseña">
                 </div>
                 <hr class="my-3 hr-text letter-spacing-2">

@@ -1,3 +1,17 @@
+from ast import Return
+from contextlib import redirect_stderr
+from email.message import EmailMessage
+from multiprocessing import context
+from django.db import  IntegrityError
+
+from django.contrib.sites.shortcuts import get_current_site 
+from django.template.loader import render_to_string
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.core.mail import EmailMessage, send_mail
+from django.contrib.auth.tokens import default_token_generator
+from django.utils.encoding import force_bytes
+
+
 from django.shortcuts import render, redirect
 from accounts.models import Account
 from django.contrib import auth
@@ -30,8 +44,36 @@ def registrarse(request):
             existe = Account.objects.filter(email=email).exists()
             if not existe:
                 user = Account.objects.create_user(first_name=username, last_name=username, username=username, email=email, password=password)
-                user.save()
+                try:
+                    user.save()
+                except:
+                    user=None
+                    return render(request,'resgistro.html',{'alarma': 'Ya existe el usuario '})
+                
+                
                 context['alarma'] = 'Usuario guardado con exito!'
+                
+                #modulo para mensajes
+                current_site = get_current_site(request)
+                mail_subject = 'Por favor para activar su cuenta en el sistema de Almacen Juanes'
+
+                body = render_to_string('verificacion_email.html',{
+
+                    'user' : user,
+                    'domain' : current_site,
+                    'uid' : str(urlsafe_base64_encode(force_bytes(user.pk))),
+                    'token' : default_token_generator.make_token(user),
+                })
+                to_email = email
+                send_email = EmailMessage(mail_subject,body,to=[to_email])
+                send_email.send()
+
+                context = {
+                    'mensaje' : 'Bienvenido' + username + '. Favor activar su cuenta en el enlace enviado a su correo.'
+                }
+                return redirect(login)
+                
+                
             else:
                 context['alarma'] = '¡El correo ya existe!'
 
@@ -58,3 +100,21 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('login')
+
+def activate(request, uidb64,token):
+    try:
+        uid = urlsafe_base64_decode(uidb64).decode()
+        user = Account._default_manager.get(pk=uid)
+    except(TypeError, ValueError, OverflowError, Account.DoesNotExist):
+        user = None
+
+    if user is not None and default_token_generator.check_token(user, token):
+        user.is_active = True
+        user.save()
+        return redirect('login')
+    else:
+        return redirect('registro')
+
+
+def verContactenos(request):
+    return render(request,'contactenos.html')

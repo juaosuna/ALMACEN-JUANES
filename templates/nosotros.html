@@ -4,7 +4,7 @@
 {% block content %}
 
     <!-- Hero Section-->
-    <section class="hero hero-image light-overlay" style="background-image: url('/nosotros.jpg');">
+    <section class="hero hero-image light-overlay" id="fondo4">
         <div class="container overlay-content" >
           <!-- Hero Content-->
           <div class="hero-content">
@@ -13,48 +13,30 @@
         </div>
     </section>
     
-    <div class="container py-6">
-        <div class="row">
-          <div class="col-xl-2">
-            <div class="horizontal-line d-none d-xl-block"></div>
-          </div>
-          <div class="col-xl-6">
-            <h6 class="text-primary text-uppercase letter-spacing-5 mb-3"> About us</h6>
-            <h1 class="display-3 fw-bold mb-5">We are Varkala</h1>
-            <p class="text-lg text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections</p>
-          </div>
-        </div>
-    </div>
     <div class="container pt-4 pb-6">
         <div class="row mb-5">
           <div class="col-xl-2">
             <div class="horizontal-line d-none d-xl-block"></div>
           </div>
-          <div class="col-xl-8">
-            <h6 class="text-primary text-uppercase letter-spacing-5 mb-3"> The old times</h6>
-            <h2 class="display-3 fw-bold mb-5">History of Varkala</h2>
-          </div>
         </div>
         <div class="row mb-5">
-          <div class="col-sm-4"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/photo/raoul-ortega-2JtF6pYAOOI-unsplash.jpg" alt=""></div>
+          <div class="col-sm-4"><img class="img-fluid" src="{% static 'img/mision.jpg' %}" alt=""></div>
           <div class="col-sm-8 col-md-6 offset-md-1 d-flex align-items-center">
             <div>
-              <h6 class="text-uppercase text-muted letter-spacing-5 mb-1">Humble beginnings</h6>
-              <h2 class="mb-4">We started as little</h2>
-              <p class="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream.</p>
+              <h2 class="mb-4">Misión</h2>
+              <p class="text-muted">Marcar  la diferencia a través de nuestra marcas y tendencias de la moda, los cambios del mercado y la última Plataforma tecnológica para la promoción y comercialización, del portafolio de productos y servicios de las MiPymes en la ciudad de Ibagué. Mejorar la calidad de vida de nuestros socios comerciales ,clientes y empleados.</p>
             </div>
           </div>
         </div>
         <div class="row mb-5">
           <div class="col-sm-8 col-md-7 col-lg-6 d-flex align-items-center">
             <div>
-              <h6 class="text-uppercase text-muted letter-spacing-5 mb-1">Varkala today</h6>
-              <h2 class="mb-4">And then we grew a bit</h2>
-              <p class="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream.</p>
+              <h2 class="mb-4">Visión</h2>
+              <p class="text-muted">Ser una empresa  líder y reconocida en la venta de ropa, lograr también extendernos y crear  nuestras marcas de ropa, proporcionando cada día más un servicio de excelencia a nuestros clientes y que al mismo tiempo nos permitan competir en el mercado nacional con los mejores productos.</p>
             </div>
           </div>
           <div class="col-sm-4 col-md-5 offset-lg-1">
-            <img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/photo/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg" alt=""></div>
+            <img class="img-fluid" src="{% static 'img/vision.jpg' %}" alt=""></div>
         </div>
     </div>
 

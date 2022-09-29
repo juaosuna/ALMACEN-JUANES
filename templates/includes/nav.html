@@ -18,14 +18,16 @@
                 </a>
             </li>
             <!-- carrito -->
-
+            {% if user.id is None %}
+            {% else %}
             <li class="list-inline-item position-relative me-3">
-                <a class="text-dark text-primary-hover" href="">
+                <a class="text-dark text-primary-hover" href="{% url 'ver_carrito' %}">
                     <svg class="svg-icon navbar-icon">
                         <use xlink:href="#retail-bag-1"> </use>
                     </svg>
                 </a>
             </li>
+            {% endif %}
         </ul>
         <button class="navbar-toggler navbar-toggler-right" type="button"
             aria-controls="navbarContent" aria-expanded="false"
@@ -42,13 +44,27 @@
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link " id="shopDropdown" href="#">Tienda</a>
+                    <a class="nav-link " id="shopDropdown" href="{% url 'producto' %}">Tienda</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link " id="shopDropdown" href="{% url 'contactenos' %}">Contactenos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link " id="shopDropdown" href="{% url 'nosotros' %}">Nosotros</a>
+                </li>
+                {% if user.id is None %}
+                {% else %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link " id="shopDropdown" href="{% url 'logout' %}">Salir</a>
+                </li>
+                {% endif %}
+                
+                <li class="nav-item dropdown">
+                    {% if user.id is None %}
+                    <a class="nav-link " id="shopDropdown">Visitante</a>
+                    {% else %}
+                    <a class="nav-link " id="shopDropdown">{{ user.username }}</a>
+                    {% endif %}
                 </li>
             </ul>
             <!-- buscador -->
@@ -73,13 +89,16 @@
                         </svg>
                     </a>
                 </li>
+                {% if user.id is None %}
+                {% else %}
                 <li class="list-inline-item position-relative me-3">
-                    <a class="text-dark text-primary-hover" href="">
+                    <a class="text-dark text-primary-hover" href="{% url 'ver_carrito' %}">
                         <svg class="svg-icon navbar-icon">
                             <use xlink:href="#retail-bag-1"> </use>
                         </svg>  
                     </a>
                 </li>
+                {% endif %}
             </ul>   
         </div>
     </nav>

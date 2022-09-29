@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Hero Section-->
+    <section class="hero hero-image light-overlay" id="fondo5">
+        <div class="container overlay-content" >
+          <!-- Hero Content-->
+          <div class="hero-content">
+            <h1 class="hero-heading">Tienda</h1>
+          </div>
+        </div>
+    </section>
+        <div class="row">
+            <!-- Grid -->
+            <div class="products-grid col-xl-9 col-lg-8 order-lg-2">
+                <div class="row ">
+                    <!-- producto-->
+                    {% for prod in productos %}
+                    <div class="col-xl-4 col-5 px-xl-5">
+                        <div class="product product-type-0 aos-init aos-animate">
+                            <div class="product-image mb-md-3">
+                                <a href="{% url 'producto' prod.id %}">
+                                    <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light">
+                                        <img class="img-fluid image-front" src="{{ prod.icono.url }}" alt="icono del producto">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8 text-base mb-1">
+                                    <h4 class="text-dark">{{prod.nombre}}</h4>
+                                </div>
+                                <div class="col-sm-4 text-base mb-1">
+                                    <a class"text-dark mb-2" href="{% url 'producto' prod.id %}">Detalles</a>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- /producto   -->
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+{% endblock  %}

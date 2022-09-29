@@ -4,7 +4,7 @@ from multiprocessing import context
 def home(request):
     return render(request, 'home.html')
 
-def contactenos(request):
+def verContactenos(request):
     return render(request, 'contactenos.html')
 
 def nosotros(request):

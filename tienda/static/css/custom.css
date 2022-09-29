@@ -1,17 +1,35 @@
 #fondo1{
     background: url("../img/home-1-plain.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 
 }
 #fondo2{
     background: url("../img/home-2-plain.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 
 }
 #fondo3{
     background: url("../img/deal-plain.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+#fondo4{
+    background: url("../img/nosotros.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+#fondo5{
+    background: url("../img/tienda.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+#fondo6{
+    background: url("../img/moda.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 

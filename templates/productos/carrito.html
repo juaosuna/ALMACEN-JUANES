@@ -3,7 +3,7 @@
 
 {% block content %}
     <!-- Hero Section-->
-    <section class="hero py-6 hero-image light-overlay" style="background-image: url('/moda.jpg');">
+    <section class="hero py-6 hero-image light-overlay" id="fondo6">
         <div class="container overlay-content">
             <!-- Hero Content-->
             <div class="hero-content">
@@ -16,6 +16,7 @@
     <section>   
         <div class="container">
             <div class="row mb-5">
+                {% for prod in carrito %}
                 <div class="col-lg-8 pe-xl-5">
                     <div class="cart mb-5">
                         <div class="cart-body">
@@ -24,7 +25,7 @@
                                 <div class="row d-flex align-items-center text-start text-md-center">
                                     <div class="col-12 col-md-5">
                                         <div class="d-flex align-items-center">
-                                            <a href="#">
+                                            <a href="{% url 'producto' prod.id %}">
                                                 <img class="cart-item-img" src="{{ prod.icono.url }}" alt="X">
                                             </a>
                                             <div class="cart-title text-start">
@@ -38,8 +39,8 @@
                                         <div class="row align-items-center">
                                             <div class="col-md-3">
                                                 <div class="row">
-                                                    <div class="col-6 d-md-none text-muted">Valor Unidad</div>
-                                                    <div class="col-6 col-md-12 text-end text-md-center">{{prod.valor}}/{{prod.unidad}}</div>
+                                                    <div class="col-6 d-md-none text-muted">Valor Unidad/T</div>
+                                                    <div class="col-6 col-md-12 text-end text-md-center">{{prod.valor}}/{{prod.talla}}</div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -48,7 +49,7 @@
                                                     <div class="col-5 col-sm-3 col-md-12">
                                                         <div class="d-flex align-items-center">
                                                             <input class="form-control text-center border-0 border-md input-items" 
-                                                            name="cantidad" id="cantidad_{{prod.id}}" type="number" value="{{prod.cantidad}}" min="1">
+                                                            name="cantidad" id="cantidad_{{prod.id}}" onchange="cambiarCantidad({{prod.id}})" type="number" value="{{prod.cantidad}}" min="1">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -60,11 +61,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-2 d-none d-md-block text-center">
-                                                <a class="cart-remove text-muted" href="#">
+                                                <div class="cart-remove text-muted" href="{% url 'eliminar' prod.id %}">
                                                     <svg class="svg-icon w-2rem h-2rem svg-icon-light">
-                                                        <use xlink:href="#close-1"> </use>
+                                                        <use xlink:href="#close-1">Eliminar </use>
                                                     </svg>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -73,6 +74,8 @@
                         </div>
                     </div>
                 </div>
+                {% endfor %}
+                
                 <div class="col-lg-4">
                     <div class="card mb-5">
                         <div class="card-header">
@@ -95,7 +98,7 @@
                                         <td class="pt-4 text-end h3 fw-normal border-0">${{ envio }}</td>
                                     </tr>
                                     <tr>
-                                        <th class="pt-4 border-0">Total</th>
+                                        <th class="pt-4 border-0">Total a pagar</th>
                                         <td class="pt-4 text-end h3 fw-normal border-0">${{ total }}</td>
                                     </tr>
                                 </tbody>
